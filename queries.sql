@@ -1,3 +1,5 @@
+-- STEP 1 To be completed before data is loaded from the jupyter notebook 
+
 -- Drop table if exists
 DROP TABLE coffee_df_2016;
 DROP TABLE HappinessAlcohol_df;
@@ -38,9 +40,10 @@ CREATE TABLE suicide_df_2016(
 SELECT * FROM suicide_df_2016;
 
 
+-- Step 2 To be completed after data has been loaded from the jupyter notebook 
+
 -- View table columns and datatypes
 CREATE TABLE final_db AS
-SELECT * FROM suicide_df_2016;
 SELECT suicide_df_2016.country, suicide_df_2016.suicidecount, HappinessAlcohol_df.happinessscore, coffee_df_2016.coffee_consumption  FROM suicide_df_2016
 LEFT JOIN HappinessAlcohol_df
 ON suicide_df_2016.country = HappinessAlcohol_df.country
